@@ -68,7 +68,14 @@ table th {
     font-weight: bold;
 }
 
+.container {
+    padding: 20px;
+    justify-content: center;
+    display: flex;
+}
 
-
-
+.riscarTarefa{
+    text-decoration: line-through;
+    cursor: pointer;
+}
 

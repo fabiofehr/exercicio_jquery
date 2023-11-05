@@ -7,9 +7,19 @@ $(document).ready(function() {
         $('form').slideUp();
     })
 })
+$(document).ready(function(){
+    $('form').on('submit', function(e){
+        e.preventDefault();
+        const nomeDaTarefa = $('input').val();
+        const novaTarefa = $(`<li>${nomeDaTarefa}</li>`)
 
-const form = document.getElementById('form-contatos')
-form.addEventListener('submit', function(e) {
-    e.preventDefault();
-    const inputTarefa = document.getElementById('tarefa');
+        $(novaTarefa).appendTo('ul')
+        $('input').val('')
+    })
+
+    $('ul').on('click', 'li', function(e){
+        e.preventDefault();
+        $(this).toggleClass('riscarTarefa')
+    })
+
 })
